@@ -38,10 +38,10 @@ function LoginPage(props) {
   };
   
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
+    <div className="container">
+      <h1>Welcome back!</h1>
 
-      <form onSubmit={handleLoginSubmit}>
+      <form className="form-user" onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
