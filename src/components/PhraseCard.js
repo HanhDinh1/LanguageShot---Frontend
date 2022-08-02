@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 function PhraseCard ({ engPhrase, selectedLang, _id }) {
     return(
         <div className="phraseCard card">
-            <Link to={`/phrases/${_id}`}>
+            {/* <Link to={`/phrases/${_id}`}> */}
                 <h3>{engPhrase}</h3>
-            </Link>
+                <p>{selectedLang}</p>
+            {/* </Link> */}
         </div>
     );
 }

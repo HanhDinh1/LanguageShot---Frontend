@@ -1,11 +1,17 @@
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import languages from '../language-codes-array.json';
+import axios from 'axios';
+import AddPhrase from './AddPhrase';
+import PhraseCard from './PhraseCard';
+import PhraseListPage from './../pages/PhraseListPage';
+
+const API_URL = 'http://localhost:5005';
 
 const LanguageDetails = ({ languagesData }) => {
     const {id} = useParams();
 
     const [targetLang, setTargetLang] = useState();
+    const [phrases, setPhrases] = useState([]);
 
     useEffect(() =>{
         const findLanguage = languagesData.find((language) => {
@@ -16,20 +22,25 @@ const LanguageDetails = ({ languagesData }) => {
         setTargetLang(findLanguage)
     }
 },[id, languagesData]);
-//     const findLanguage = languagesData.find((languages) => languages["639-1"] === params.id
-//     );
-//   const { name, nativeName, ["639-1"], family, wikiUrl } = findLanguage;
-//   console.log(params);
 
-//   const listwikiUrl = wikiUrl.map(wiki => (
-//     <li><Link to={`/${wiki}`} key={wiki}>{languagesData.find(
-//     (languages) => languages.(639-1) === wiki).wikiUrl}</Link></li>
-//   ))
+function getAllPhrasesForLanguage(id){
+  axios.get(`${API_URL}/api/phrases/code/${id}`)
+    .then(response =>{
+      console.log(response.data)
+      setPhrases(response.data.phrasesArray)})
+    .catch(err => console.log(err))
+}
+
+useEffect(() =>{
+  if(id){
+    getAllPhrasesForLanguage(id)
+  }
+},[id]);
 
   return (
     <div className="col-7">
       {targetLang && (<><h1>{targetLang.name}</h1>
-      <table className="table text-center">
+      {/* <table className="table text-center">
         <thead></thead>
         <tbody>
           <tr>
@@ -51,7 +62,20 @@ const LanguageDetails = ({ languagesData }) => {
             </td>
           </tr>
         </tbody>
-      </table></>)} 
+      </table> */}
+      </>
+      )
+      }
+      {phrases.map(individualPhrase => {
+        return (<div>
+
+        <PhraseCard {...individualPhrase} />
+          {/* <h3>{individualPhrase.engPhrase}</h3>
+          <p>{individualPhrase.selectedLang}</p> */}
+        </div>)
+      })}
+      <AddPhrase languageCode={id} refreshPhrases={() => getAllPhrasesForLanguage(id)}/>
+   
     </div>
   );
   };

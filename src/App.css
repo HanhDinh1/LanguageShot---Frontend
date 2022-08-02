@@ -96,7 +96,7 @@ body {
   cursor: pointer;
   outline: none;
 }
-.note-form {
+.note-form, addPhrase-form {
 position: relative;
 width: 480px;
 margin: 30px auto 20px auto;
@@ -105,7 +105,7 @@ padding: 15px;
 border-radius: 7px;
 box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-.note-form input {
+.note-form input, textarea {
   width: 100%;
   border: none;
   padding: 4px;
@@ -114,15 +114,7 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   font-family: inherit;
   resize: none;
 }
-.note-form textarea{
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-}
+
 .note-form button {
   position: absolute;
   right: 18px;
@@ -136,6 +128,15 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+.addPhrase-form input, textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
 }
 
 /* login, signup form */
@@ -154,7 +155,7 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   border: 1px solid #822659;
   background-color: #fff;
   color: #822659;
-  width: 250px;
+  /* width: 250px; */
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 10px 15px;
@@ -175,6 +176,41 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
+}
+/* login, signup from end */
+
+.phraseCard {
+  color: #822659;
+  position: relative;
+  width: 480px;
+  margin: 10px auto 10px auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px lightgrey;
+}
+.addPhrase {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.addPhrase-form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background-color: #822659;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 36px;
+  border-radius: 15%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
 }
 
 footer {

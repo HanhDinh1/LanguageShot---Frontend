@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import AddPhrase from "./../components/AddPhrase";
+// import AddPhrase from "./../components/AddPhrase";
 import PhraseCard from "./../components/PhraseCard";
 
 const API_URL = "http://localhost:5005";
@@ -18,7 +18,10 @@ function PhraseListPage() {
       `${API_URL}/api/phrases`,
       { headers: { Authorization: `Bearer ${storedToken}` } }
     )
-      .then((response) => setPhrases(response.data))
+      .then((response) => {
+        console.log(response.data)
+        setPhrases(response.data)
+      })
       .catch((error) => console.log(error));
   };
 
@@ -30,9 +33,9 @@ function PhraseListPage() {
   return (
     <div className="PhraseListPage">
       
-      <AddPhrase refreshPhrases={getAllPhrases} />
-      
-      { phrases.map((phrase) => <PhraseCard key={phrase._id} {...phrase} />  )} 
+      {/* <AddPhrase refreshPhrases={getAllPhrases} /> */}      
+      {/* { phrases.map((phrase) => <PhraseCard key={phrase._id} {...phrase} />  )}  */}
+      <PhraseCard phrases={phrases}/>
        
     </div>
   );

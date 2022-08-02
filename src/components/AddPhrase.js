@@ -7,10 +7,9 @@ function AddPhrase(props) {
   const [engPhrase, setEngPhrase] = useState("");
   const [selectedLang, setSelectedLang] = useState("");
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const requestBody = { engPhrase, selectedLang };
+    const requestBody = { engPhrase, selectedLang, languageCode: props.languageCode };
 
     // Get the token from the localStorage
     const storedToken = localStorage.getItem('authToken');
@@ -31,29 +30,29 @@ function AddPhrase(props) {
       .catch((error) => console.log(error));
   };
 
-
   return (
-    <div className="AddPhrase">
-      <h3>Add A Common Phrase</h3>
-
-      <form onSubmit={handleSubmit}>
-        <label>In English:</label>
+    <div className="addPhrase">
+      {/* <h3>Add A Common Phrase</h3> */}
+      <br/>
+      <form className="addPhrase-form" onSubmit={handleSubmit}>
+        {/* <label>In English:</label> */}
         <input
           type="text"
           name="engPhrase"
           value={engPhrase}
+          placeholder="Add an English phrase..."
           onChange={(e) => setEngPhrase(e.target.value)}
         />
-
-        <label>In selected Language:</label>
+      <br/>
+        {/* <label>In Selected Language:</label> */}
         <textarea
           type="text"
           name="selectedLang"
           value={selectedLang}
+          placeholder="Write your translations..."
           onChange={(e) => setSelectedLang(e.target.value)}
         />
-
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button>           
       </form>
     </div>
   );

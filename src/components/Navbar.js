@@ -17,10 +17,12 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <Link to="/phrases">
+          {/* <Link to="/phrases">
             <button>Common Phrases</button>
-          </Link>
-        
+          </Link> */}
+        <Link to="/LanguagesList">
+        <button>Chose Language</button>
+        </Link>
           <button onClick={logOutUser}>Logout</button>
           <span>Welcome, {user && user.name}💗</span>
         </>

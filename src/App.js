@@ -16,20 +16,21 @@ import LanguagesList from "./components/LanguagesList";
 import LanguageDetails from "./components/LanguageDetails";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import languagecodes from "./language-codes-array.json"
 
 function App() {
-const [LanguagesData, setLanguagesData] = useState(null);
-useEffect(() => {
+const [LanguagesData, setLanguagesData] = useState(languagecodes);
+// useEffect(() => {
 
-  axios.get("http://localhost:3001/languages")
-  .then((response) => {
-    console.log(response);
-    setLanguagesData(response.data);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-}, []);
+//   axios.get("http://localhost:3001/languages")
+//   .then((response) => {
+//     console.log(response);
+//     setLanguagesData(response.data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// }, []);
 
 if (!LanguagesData){
   return <p>Loading pages</p>
@@ -61,7 +62,7 @@ if (!LanguagesData){
         <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} />
 
         <Route path="/LanguagesList" element={<LanguagesList languagesData={LanguagesData} />} />
-        <Route path="/:id" element={<LanguageDetails languagesData={LanguagesData} />} />
+        <Route path="/languages/:id" element={<LanguageDetails languagesData={LanguagesData} />} />
       </Routes>
       
       <Footer />
