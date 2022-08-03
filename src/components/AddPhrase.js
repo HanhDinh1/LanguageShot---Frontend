@@ -35,7 +35,6 @@ function AddPhrase(props) {
       {/* <h3>Add A Common Phrase</h3> */}
       <br/>
       <form className="addPhrase-form" onSubmit={handleSubmit}>
-        {/* <label>In English:</label> */}
         <input
           type="text"
           name="engPhrase"
@@ -44,7 +43,6 @@ function AddPhrase(props) {
           onChange={(e) => setEngPhrase(e.target.value)}
         />
       <br/>
-        {/* <label>In Selected Language:</label> */}
         <textarea
           type="text"
           name="selectedLang"

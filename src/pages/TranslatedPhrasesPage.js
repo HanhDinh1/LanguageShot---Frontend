@@ -19,6 +19,7 @@ function TranslatedPhrasesPage (props) {
         { headers: { Authorization: `Bearer ${storedToken}` } }
       )
       .then((response) => {
+        console.log(response);
         const onePhrase = response.data;
         setPhrase(onePhrase);
       })
@@ -38,9 +39,9 @@ function TranslatedPhrasesPage (props) {
         </>
       )}
 
-      <Link to="/phrases">
+    {phrase && <Link to={`/languages/${phrase.languageCode}`}>
         <button>Back to common phrases</button>
-      </Link>
+      </Link>}  
           
       <Link to={`/phrases/edit/${phraseId}`}>
         <button>Edit Phrase</button>

@@ -7,6 +7,7 @@ const API_URL = "http://localhost:5005";
 function EditPhrasePage(props) {
   const [engPhrase, setEngPhrase] = useState("");
   const [selectedLang, setSelectedLang] = useState("");
+  const [languageCode, setLanguageCode] = useState("");
 
   const navigate =  useNavigate();
   const { phraseId } = useParams();
@@ -26,6 +27,7 @@ function EditPhrasePage(props) {
         const onePhrase = response.data;
         setEngPhrase(onePhrase.engPhrase);
         setSelectedLang(onePhrase.selectedLang);
+        setLanguageCode(onePhrase.languageCode);
       })
       .catch((error) => console.log(error));
     
@@ -50,8 +52,7 @@ function EditPhrasePage(props) {
         navigate(`/phrases/${phraseId}`)
       });
   };
-  
-  
+
   const deletePhrase = () => {
     // Get the token from the localStorage
     const storedToken = localStorage.getItem('authToken');      
@@ -62,7 +63,7 @@ function EditPhrasePage(props) {
         `${API_URL}/api/phrases/${phraseId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }           
       )
-      .then(() => navigate("/phrases"))
+      .then(() => navigate(`/languages/${languageCode}`))
       .catch((err) => console.log(err));
   };  
 

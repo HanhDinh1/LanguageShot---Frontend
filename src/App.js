@@ -18,27 +18,20 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import languagecodes from "./language-codes-array.json"
 
+import SearchBar from "./components/SearchBar";
+// import LanguageNames from "./language-codes-array.json";
+
 function App() {
-const [LanguagesData, setLanguagesData] = useState(languagecodes);
-// useEffect(() => {
+const [languagesData, setLanguagesData] = useState(languagecodes);
 
-//   axios.get("http://localhost:3001/languages")
-//   .then((response) => {
-//     console.log(response);
-//     setLanguagesData(response.data);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
-// }, []);
-
-if (!LanguagesData){
+if (!languagesData){
   return <p>Loading pages</p>
   }
 
   return (
     <div className="App">
       <Navbar />
+      <SearchBar placeholder="Enter a language..." data={languagecodes} />
 
       <Routes>      
         <Route path="/" element={<HomePage />} />
@@ -61,8 +54,8 @@ if (!LanguagesData){
         <Route path="/signup" element={<IsAnon> <SignupPage /> </IsAnon>} />
         <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} />
 
-        <Route path="/LanguagesList" element={<LanguagesList languagesData={LanguagesData} />} />
-        <Route path="/languages/:id" element={<LanguageDetails languagesData={LanguagesData} />} />
+        <Route path="/LanguagesList" element={<LanguagesList languagesData={languagesData} />} />
+        <Route path="/languages/:id" element={<LanguageDetails languagesData={languagesData} />} />
       </Routes>
       
       <Footer />

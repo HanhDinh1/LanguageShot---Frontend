@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import AddPhrase from './AddPhrase';
 import PhraseCard from './PhraseCard';
-import PhraseListPage from './../pages/PhraseListPage';
 
 const API_URL = 'http://localhost:5005';
 
@@ -39,6 +38,7 @@ useEffect(() =>{
 
   return (
     <div className="col-7">
+      <div className="selectedLang">
       {targetLang && (<><h1>{targetLang.name}</h1>
       {/* <table className="table text-center">
         <thead></thead>
@@ -66,6 +66,8 @@ useEffect(() =>{
       </>
       )
       }
+      <AddPhrase languageCode={id} refreshPhrases={() => getAllPhrasesForLanguage(id)}/>
+      </div>
       {phrases.map(individualPhrase => {
         return (<div>
 
@@ -74,8 +76,7 @@ useEffect(() =>{
           <p>{individualPhrase.selectedLang}</p> */}
         </div>)
       })}
-      <AddPhrase languageCode={id} refreshPhrases={() => getAllPhrasesForLanguage(id)}/>
-   
+      
     </div>
   );
   };
