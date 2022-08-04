@@ -8,11 +8,11 @@ function Navbar() {
 
   return (
     <div className="navbar"> 
-      <nav >
-        <div className="navbar-h1">
-          <h1>Language Shot</h1>
+      <nav>
+        <div>
+          <h1 className="navbarH1">Language Shot</h1>
         </div> 
-        <div className="welcome"><span>Welcome {user && user.name}💗</span></div>
+        <div className="welcome"><span>Hello {user && user.name}💗</span></div>
         <div className="navbar-button">
           <Link to="/">
             <button>Home</button>
@@ -23,6 +23,9 @@ function Navbar() {
            
               <Link to="/LanguagesList">
               <button>Chose Language</button>
+              </Link>
+              <Link to="/profile">
+              <button>Your Profile</button>
               </Link>
               <button onClick={logOutUser}>Log Out</button>            
             </>
@@ -36,7 +39,7 @@ function Navbar() {
               <Link to="/signup"> <button>Sign Up</button> </Link>
               <Link to="/login"> <button>Log In</button> </Link>
             </>
-          )}  
+          )}
         </div>    
       </nav>
     </div>

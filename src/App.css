@@ -24,7 +24,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #F0A500;
 }
 @keyframes App-logo-spin {
   from {
@@ -41,40 +41,76 @@ body {
   justify-content: center;
 }
 .navbar {
-  background-color: #822659;
-  margin: auto -16px;
-  padding: 16px 32px;
+  background-color: #F0A500;
+  /* margin: auto -16px; */
+  /* padding: 16px 32px; */
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 105px;
   color: white;
 }
-.navbar-h1 {
+.navbarH1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
-  font-size: 15px;
-  padding-right: 80%;
-  padding-top: 8px;
+  font-size: 27px;
+  font-weight: bolder;
+  padding-right: 75%;
+  padding-top: 25px;
 }
 .navbar button {
-  background-color: #822659;
+  background-color: #F0A500;
   border: 0;
   color: #fff;
-  /* border-radius: 3px; */
+  border-radius: 3px;
   width: 105px;
-  font-size: 12px;
-  margin-bottom: 50px;
-  display: inline;
-  overflow: hidden;
-  position: relative;
+  font-size: 13px;
+  /* display: inline; */
+  /* overflow: hidden; */
+  /* position: relative; */
 }
 .navbar-button {
 float: right;
+margin-bottom: 50px;
 }
 .welcome {
 color: #eee;
 padding-right: 30%;
 }
+.header {
+display: block;
+align-items: center;
+padding-left: 240px;
+}
+
+.editBtn {
+  position: absolute;
+  right: 2px;
+  bottom: -8px;
+  background-color: #F0A500;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 36px;
+  border-radius: 15%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.addBtn {
+  position: absolute;
+  right: 57px;
+  bottom: -8px;
+  background-color: #F0A500;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 36px;
+  border-radius: 15%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
 .note {
   background-color: #fff;
   border-radius: 7px;
@@ -98,7 +134,7 @@ padding-right: 30%;
   position: relative;
   float: right;
   margin-right: 10px;
-  color: #822659;
+  color: #F0A500;
   border: none;
   width: 36px;
   height: 36px;
@@ -127,7 +163,7 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background-color: #822659;
+  background-color: #F0A500;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -157,12 +193,12 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
 .container h1 {
   font-size: 40px;
   font-weight: 200;
-  color: #822659;
+  color: #F0A500;
 }
 .form-user input {
-  border: 1px solid #822659;
+  border: 1px solid #F0A500;
   background-color: #fff;
-  color: #822659;
+  color: #F0A500;
   /* width: 250px; */
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
@@ -171,16 +207,16 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   display: block;
   text-align: center;
   font-size: 18px;
-  color: #822659;
+  color: #F0A500;
   font-weight: 300;
 }
 .form-user button {
   appearance: none;
   outline: 0;
-  background-color: #AF7AB3;
+  background-color: #FFF3AF;
   border: 0;
   padding: 10px 15px;
-  color: #822659;
+  color: #F0A500;
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
@@ -188,7 +224,7 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
 /* login, signup from end */
 
 .phraseCard {
-  color: #822659;
+  color: #F0A500;
   position: relative;
   width: 480px;
   margin: 10px auto 10px auto;
@@ -210,7 +246,7 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background-color: #822659;
+  background-color: #F0A500;
   color: #fff;
   border: none;
   width: 50px;
@@ -225,12 +261,12 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   margin: 15px;
 }
 
-footer {
+/* footer {
   text-align: center;
   width: 100%;
   height: 2.5rem;
 }
 
 footer p {
-  color: #AC7088;
-}
+  color: #FFF3AF;
+} */

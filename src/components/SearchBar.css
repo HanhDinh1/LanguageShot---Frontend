@@ -1,5 +1,5 @@
 .searchInputs {
-    margin-top: 105px;
+    margin-top: 20px;
     display: flex;
 }
 .search input {
@@ -43,7 +43,7 @@ input:focus {
     height: 50px;
     display: flex;
     align-items: center;
-    color: #822659;
+    color: #F0A500;
 }
 .dataItem p {
     margin-left: 10px;;
@@ -57,3 +57,6 @@ a:hover{
 #clearBtn {
     cursor: pointer;
 }
+/* .search {
+    margin-left: 1030px;
+} */

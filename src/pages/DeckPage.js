@@ -9,12 +9,12 @@ function PhraseCard ({ engPhrase, selectedLang, _id }) {
                 <h3>{engPhrase}</h3>
                 <p>{selectedLang}</p>
         
-            <button className="editBtn"><Link to={`/phrases/${_id}`}>
+            <button><Link to={`/phrases/${_id}`}>
                 {/* <h3>{engPhrase}</h3>
                 <p>{selectedLang}</p> */}
                 Edit
             </Link></button>
-            <button className="addBtn">Add to Deck</button>
+            <button>Add to Deck</button>
         </div>
     );
 }

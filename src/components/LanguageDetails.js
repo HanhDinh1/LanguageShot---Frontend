@@ -39,7 +39,7 @@ useEffect(() =>{
   return (
     <div className="col-7">
       <div className="selectedLang">
-      {targetLang && (<><h1>{targetLang.name}</h1>
+      {targetLang && (<><h1 className='languageName'>{targetLang.name}</h1>
       {/* <table className="table text-center">
         <thead></thead>
         <tbody>
