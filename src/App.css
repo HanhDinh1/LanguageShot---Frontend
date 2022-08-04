@@ -40,22 +40,30 @@ body {
   margin-bottom: 0.0;
   justify-content: center;
 }
-.navbar {
+/* .navbar {
   background-color: #F0A500;
-  /* margin: auto -16px; */
-  /* padding: 16px 32px; */
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 105px;
   color: white;
+} */
+.logo {
+  display: flex;
+  float: left;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.logo-img {
+  padding-top: 8px;
 }
 .navbarH1 {
   color: #fff;
   font-family: "McLaren", cursive;
-  font-weight: 200;
-  font-size: 27px;
+  font-weight: 180;
+  font-size: 33px;
+  text-align: center;
   font-weight: bolder;
-  padding-right: 75%;
-  padding-top: 25px;
+  padding-right: 60%;
+  padding-top: 14px; 
 }
 .navbar button {
   background-color: #F0A500;
@@ -64,6 +72,7 @@ body {
   border-radius: 3px;
   width: 105px;
   font-size: 13px;
+  padding-top: 40px;;
   /* display: inline; */
   /* overflow: hidden; */
   /* position: relative; */
@@ -74,12 +83,20 @@ margin-bottom: 50px;
 }
 .welcome {
 color: #eee;
-padding-right: 30%;
+padding-right: 5%;
+padding-top: 20px;
 }
-.header {
+.quote {
 display: block;
-align-items: center;
-padding-left: 240px;
+width: 400px;
+/* align-items: center; */
+/* padding-right: 65%;*/
+/* padding-top: 32px; */
+}
+.home-page {
+  display: flex;
+  flex-direction: space-between;
+  
 }
 
 .editBtn {
@@ -259,6 +276,20 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
 
 .selectedLang {
   margin: 15px;
+}
+.languageCard {
+  color: #F0A500;
+  position: relative;
+  width: 320px;
+  margin: 10px auto 10px auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px lightgrey;
+}
+.whichLanguage {
+  text-align: center;
+  color: darkgrey;
 }
 
 /* footer {

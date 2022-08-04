@@ -1,23 +1,42 @@
 import { Link } from "react-router-dom";
-// import { useState } from "react";
-// import languagecodes from "./../language-codes-array.json"
-// import SearchBar from "./../components/SearchBar";
 
 const LanguagesList = ({languagesData}) => {
-    // const [languagesData, setLanguagesData] = useState(languagecodes);
+    
     return(
-        <div className="col-5" style={{maxheight:'90vh', 'overflow': 'scroll'}}>
-        {/* <div>
-            <SearchBar placeholder="Enter a language..." data={languagecodes} />
-        </div> */}
+        <div>   
+        <h1 className="whichLanguage">Choose Language</h1>   
         {languagesData.map((languages) => {
             return(
+                <div>
                 <Link to={`/languages/${languages["639-1"]}`} key={languages.name}>
-                    <h2>{languages.name}</h2>
+                    <h2 className="languageCard">{languages.name}</h2>
+                    {/* <table className="table text-center">
+                        <thead></thead>
+                        <tbody>
+                        <tr>
+                            <td style={{ width: '30%' }}>Native Name</td>
+                            <td>{languages.nativeName}</td>
+                        </tr>
+                        <tr>
+                            <td>Family</td>
+                            <td>
+                            {languages.family}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Wikipedia</td>
+                            <td>
+                            <ul>
+                            {languages.wikiUrl}
+                            </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table> */}
                 </Link>
+                </div>
             )
         })}
-        {/* <div className="list-group">{linkLanguage}</div>   */}
         </div>
     )
 }

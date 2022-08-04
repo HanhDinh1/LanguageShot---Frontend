@@ -40,30 +40,7 @@ useEffect(() =>{
     <div className="col-7">
       <div className="selectedLang">
       {targetLang && (<><h1 className='languageName'>{targetLang.name}</h1>
-      {/* <table className="table text-center">
-        <thead></thead>
-        <tbody>
-          <tr>
-            <td style={{ width: '30%' }}>Native Name</td>
-            <td>{targetLang.nativeName}</td>
-          </tr>
-          <tr>
-            <td>Family</td>
-            <td>
-              {targetLang.family}
-            </td>
-          </tr>
-          <tr>
-            <td>Wikipedia</td>
-            <td>
-              <ul>
-              {targetLang.wikiUrl}
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table> */}
-      </>
+          </>
       )
       }
       <AddPhrase languageCode={id} refreshPhrases={() => getAllPhrasesForLanguage(id)}/>

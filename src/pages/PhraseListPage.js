@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import AddPhrase from "./../components/AddPhrase";
 import PhraseCard from "./../components/PhraseCard";
 
 const API_URL = "http://localhost:5005";

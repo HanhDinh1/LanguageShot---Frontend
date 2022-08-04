@@ -32,7 +32,7 @@ function AddPhrase(props) {
 
   return (
     <div className="addPhrase">
-      {/* <h3>Add A Common Phrase</h3> */}
+      
       <br/>
       <form className="addPhrase-form" onSubmit={handleSubmit}>
         <input

@@ -18,8 +18,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import languagecodes from "./language-codes-array.json";
 
-// import SearchBar from "./components/SearchBar";
+import SearchBar from "./components/SearchBar";
 import UserProfile from "./pages/UserProfile";
+import DeckPage from "./pages/DeckPage";
 
 function App() {
 const [languagesData, setLanguagesData] = useState(languagecodes);
@@ -31,10 +32,10 @@ if (!languagesData){
   return (
     <div className="App">
       <Navbar />
-      {/* <SearchBar placeholder="Enter a language..." data={languagecodes} /> */}
+      <SearchBar placeholder="Enter a language..." data={languagecodes} />
 
       <Routes>      
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage languagesData={languagesData} />} />
 
         <Route
           path="/phrases"
@@ -58,6 +59,8 @@ if (!languagesData){
 
         <Route path="/LanguagesList" element={<LanguagesList languagesData={languagesData} />} />
         <Route path="/languages/:id" element={<LanguageDetails languagesData={languagesData} />} />
+
+        <Route path="/deckPage" element={<DeckPage languagesData={languagesData} />} />
       </Routes>
       
       {/* <Footer /> */}
