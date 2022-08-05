@@ -298,8 +298,13 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   box-shadow: 0 1px 1px lightgrey;
 }
 .whichLanguage {
+  padding-left: 100px;
   text-align: center;
   color: darkgrey;
+}
+
+.userNote {
+padding-top: 100px;
 }
 
 /* footer {

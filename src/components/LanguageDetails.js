@@ -4,7 +4,7 @@ import axios from 'axios';
 import AddPhrase from './AddPhrase';
 import PhraseCard from './PhraseCard';
 
-const API_URL = 'http://localhost:5005';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const LanguageDetails = ({ languagesData }) => {
     const {id} = useParams();

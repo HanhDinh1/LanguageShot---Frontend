@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import PhraseCard from "./../components/PhraseCard";
 
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_API_URL;
 
 function PhraseListPage() {
   const [phrases, setPhrases] = useState([]);

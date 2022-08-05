@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 function SignupPage(props) {
@@ -11,18 +11,23 @@ function SignupPage(props) {
   const [name, setName] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
+  const [selectedFile, setSelectedFile] = useState();
+
   const navigate = useNavigate();
 
   
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
   const handleName = (e) => setName(e.target.value);
-
+  
+  const changeHandler = (event) => {
+      setSelectedFile(event.target.files[0]);
+    };
   
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     // Create an object representing the request body
-    const requestBody = { email, password, name };
+    const requestBody = { email, password, name, selectedFile };
 
     // Make an axios request to the API
     // If POST request is successful redirect to login page
@@ -50,7 +55,8 @@ function SignupPage(props) {
 
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
-
+        <input type="file" name="file" onChange={changeHandler}/>
+        
         <button type="submit">Sign Up</button>
       </form>
 
