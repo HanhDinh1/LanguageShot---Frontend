@@ -95,8 +95,18 @@ width: 400px;
 }
 .home-page {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: space-between;
-  
+
+}
+.home-left {
+  padding-top: 50px;
+}
+.home-right {
+  padding-right: 300px;
+}
+.home-img {
+  padding-right: 70px;;
 }
 
 .editBtn {

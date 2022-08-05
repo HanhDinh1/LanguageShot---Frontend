@@ -8,7 +8,7 @@ function HomePage(props) {
   const { languagesData } = props;
     return (
       <div className="home-page">
-
+      
         <div className="home-left">             
             <div className="home-img">
                 <img src="/lilPeople.png" alt="homeImg" height="350px"></img>
@@ -18,10 +18,13 @@ function HomePage(props) {
                 <i>"To have another language is to possess a second soul."</i> <br/>
                     -Charlemagne-
               </aside>
-            </div>         
+            </div>  
+            <div className="home-note">
+              <NotePage/>
+            </div>       
         </div>
 
-        <div className="home-mid">
+        <div className="home-right">
         <h1 className="whichLanguage">Choose Language</h1>   
         {languagesData.map((languages) => {
             return(
@@ -32,14 +35,8 @@ function HomePage(props) {
                 </div>
             )
         })} 
-        </div>
-
-        <div className="home-right">
-          <NotePage/>
-        </div>
-        
+        </div>       
       </div>
     );
-  }
-  
+  } 
   export default HomePage;
