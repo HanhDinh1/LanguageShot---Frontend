@@ -27,7 +27,7 @@ function SignupPage(props) {
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     // Create an object representing the request body
-    const requestBody = { email, password, name, selectedFile };
+    const requestBody = { email, password, name };
 
     // Make an axios request to the API
     // If POST request is successful redirect to login page
@@ -53,9 +53,9 @@ function SignupPage(props) {
         <label>Password:</label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
 
-        <label>Name:</label>
+        {/* <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
-        <input type="file" name="file" onChange={changeHandler}/>
+        <input type="file" name="file" onChange={changeHandler}/> */}
         
         <button type="submit">Sign Up</button>
       </form>
