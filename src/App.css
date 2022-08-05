@@ -97,7 +97,7 @@ width: 400px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: space-between;
-
+/* margin-left: 400px; */
 }
 .home-left {
   padding-top: 50px;
@@ -106,7 +106,7 @@ width: 400px;
   padding-right: 300px;
 }
 .home-img {
-  padding-right: 70px;;
+padding-right: 200px;
 }
 
 .editBtn {
@@ -212,8 +212,6 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
 
 /* login, signup form */
 .container {
-  margin: 10% auto;
-  padding: 80px 0;
   text-align: center;
 }
 
@@ -298,13 +296,8 @@ box-shadow: 0 1px 5px rgb(138, 137, 137);
   box-shadow: 0 1px 1px lightgrey;
 }
 .whichLanguage {
-  padding-left: 100px;
   text-align: center;
   color: darkgrey;
-}
-
-.userNote {
-padding-top: 100px;
 }
 
 /* footer {

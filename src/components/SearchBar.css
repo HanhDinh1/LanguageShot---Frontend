@@ -60,6 +60,7 @@ a:hover{
 }
 .search {
     display: flex;
-    float: right;
+    /* float:right; */
+    /* padding-right: 1000px; */
     flex-direction: column;
 }
