@@ -53,9 +53,9 @@ function SignupPage(props) {
         <label>Password:</label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
 
-        {/* <label>Name:</label>
+        <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
-        <input type="file" name="file" onChange={changeHandler}/> */}
+        {/* <input type="file" name="file" onChange={changeHandler}/> */}
         
         <button type="submit">Sign Up</button>
       </form>
